@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Uri smsUri = Uri.parse("sms:" + num);
                     Intent intent = new Intent(Intent.ACTION_VIEW, smsUri);
-                    intent.putExtra("address", num);
+                    intent.putExtra("phone_num", num);
                     intent.putExtra("sms_body", con);
                     intent.setType("vnd.android-dir/mms-sms"); //here setType will set the previous data null.
                     if (intent.resolveActivity(getPackageManager()) != null) {
